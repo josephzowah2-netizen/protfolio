@@ -1,0 +1,1690 @@
+
+/* ==========================================================
+   1. ROOT VARIABLES & GLOBAL STYLES
+========================================================== */
+
+:root {
+    --bg-color: #0b1120;
+    --bg-secondary: #111a2b;
+    --card-bg: #151f32;
+
+    --gold: #d4af37;
+    --gold-light: #f1d675;
+    --gold-soft: #f3e5b0;
+
+    --white: #f8fafc;
+    --text-color: #b8c3d6;
+    --border-color: rgba(212, 175, 55, 0.18);
+
+    --dark-text: #172033;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-color);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+.gold-text {
+    color: var(--gold);
+}
+
+
+/* ==========================================================
+   2. NAVBAR & LARGER HEADER LOGO
+========================================================== */
+
+.custom-navbar {
+    background: rgba(11, 17, 32, 0.97);
+    padding: 14px 0;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 1000;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--white) !important;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+
+    transition: var(--transition);
+}
+
+.navbar-brand:hover {
+    transform: scale(1.02);
+}
+
+/* Increased header logo size */
+.navbar-logo {
+    width: 72px;
+    height: 58px;
+    object-fit: contain;
+    margin-right: 8px;
+    transition: var(--transition);
+}
+
+.navbar-brand:hover .navbar-logo {
+    transform: scale(1.04);
+}
+
+/* Brand text if present */
+.navbar-brand .logo-text {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.navbar-brand .logo-dot {
+    color: var(--gold);
+}
+
+/* Brand badge if present */
+.navbar-brand .logo-badge {
+    min-width: 75px;
+    padding: 8px 12px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    border-radius: 8px;
+
+    background: linear-gradient(135deg, #102747, #16365c);
+    color: var(--gold);
+
+    text-align: center;
+    border: 1px solid rgba(217, 181, 54, 0.25);
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+.nav-link {
+    color: #d9dfeb !important;
+    font-weight: 500;
+    margin: 0 5px;
+    transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--gold) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--gold);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.2);
+}
+
+
+/* ==========================================================
+   3. HERO SECTION
+========================================================== */
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    padding: 120px 0 70px;
+
+    background:
+        radial-gradient(
+            circle at 80% 45%,
+            rgba(212, 175, 55, 0.06),
+            transparent 35%
+        ),
+        var(--bg-color);
+}
+
+.hero-row {
+    min-height: 75vh;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 18px;
+
+    color: var(--gold-light);
+    background: rgba(212, 175, 55, 0.08);
+
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 50px;
+
+    font-size: 0.85rem;
+}
+
+.hero-badge i {
+    color: var(--gold);
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--white);
+}
+
+.hero-description {
+    max-width: 600px;
+
+    color: var(--text-color);
+    line-height: 1.9;
+
+    margin-top: 22px;
+    font-size: 1rem;
+}
+
+
+/* Hero buttons */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-primary-custom {
+    background: var(--gold);
+    color: #111827;
+    border: 1px solid var(--gold);
+
+    padding: 13px 28px;
+    border-radius: 50px;
+
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary-custom:hover {
+    background: var(--gold-light);
+    color: #111827;
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+}
+
+.btn-outline-custom {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+
+    padding: 13px 28px;
+    border-radius: 50px;
+
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-outline-custom:hover {
+    background: var(--gold);
+    color: #111827;
+    transform: translateY(-3px);
+}
+
+
+/* Hero social links */
+
+.hero-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero-socials a {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+
+    color: var(--gold);
+    font-size: 1.15rem;
+
+    transition: var(--transition);
+}
+
+.hero-socials a:hover {
+    background: var(--gold);
+    color: var(--bg-color);
+    transform: translateY(-4px);
+}
+
+
+/* ==========================================================
+   4. HERO IMAGE & ANIMATED GOLD RING
+========================================================== */
+
+.hero-image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image assembly container */
+
+.hero-image-wrapper {
+    position: relative;
+
+    width: 460px;
+    height: 460px;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+}
+
+/* Main rotating ring */
+
+.gold-ring {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+        transparent 0deg,
+        transparent 35deg,
+        var(--gold) 75deg,
+        var(--gold-light) 120deg,
+        transparent 155deg,
+        transparent 225deg,
+        var(--gold) 275deg,
+        var(--gold-light) 315deg,
+        transparent 345deg,
+        transparent 360deg
+    );
+
+    animation: rotateRing 8s linear infinite;
+
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.2));
+}
+
+/* Hollow center of ring */
+
+.gold-ring::before {
+    content: "";
+    position: absolute;
+    inset: 5px;
+
+    border-radius: 50%;
+    background: var(--bg-color);
+}
+
+/* Secondary ring */
+
+.gold-ring.ring-two {
+    inset: 4%;
+
+    width: 92%;
+    height: 92%;
+
+    background: conic-gradient(
+        transparent 0deg,
+        transparent 75deg,
+        rgba(212, 175, 55, 0.35) 115deg,
+        transparent 165deg,
+        transparent 360deg
+    );
+
+    animation: rotateRingReverse 12s linear infinite;
+    filter: none;
+}
+
+.gold-ring.ring-two::before {
+    inset: 3px;
+}
+
+/* Profile image frame */
+
+.hero-image-inner {
+    position: relative;
+    z-index: 2;
+
+    width: 370px;
+    height: 370px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #172236;
+}
+
+/* Profile image */
+
+.hero-profile-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 50%;
+}
+
+
+/* Ring rotation */
+
+@keyframes rotateRing {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateRingReverse {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* ==========================================================
+   5. FLOATING HERO CARDS
+========================================================== */
+
+.floating-card {
+    position: absolute;
+    z-index: 4;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: #182338;
+    color: var(--white);
+
+    border: 1px solid rgba(212, 175, 55, 0.35);
+
+    padding: 13px 18px;
+    border-radius: 14px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+.floating-card i {
+    color: var(--gold);
+    font-size: 1.25rem;
+}
+
+.developer-card {
+    top: 12%;
+    right: -2%;
+}
+
+.analytics-card {
+    bottom: 12%;
+    left: -2%;
+    animation-delay: 1.5s;
+}
+
+@keyframes floatCard {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* ==========================================================
+   6. GENERAL SECTION STYLES
+========================================================== */
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-label {
+    display: inline-block;
+
+    color: var(--gold);
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    color: var(--text-color);
+}
+
+
+/* ==========================================================
+   7. ABOUT SECTION
+========================================================== */
+
+.about-details {
+    margin-top: 60px;
+}
+
+.about-details .accordion {
+    margin-top: 30px;
+}
+
+.about-details .accordion-item {
+    background: #101B2D;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.about-details .accordion-button {
+    background: #101B2D;
+    color: #ffffff;
+    padding: 22px 25px;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.about-details .accordion-button:not(.collapsed) {
+    background: #17263B;
+    color: #D4AF37;
+    box-shadow: none;
+}
+
+.about-details .accordion-button::after {
+    filter: invert(1);
+}
+
+.about-details .accordion-button:not(.collapsed)::after {
+    filter: none;
+}
+
+.about-details .accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.about-details .accordion-body {
+    background: #101B2D;
+    color: #D5DCE7;
+    padding: 25px;
+    line-height: 1.8;
+}
+
+.about-details .accordion-body h4 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.about-details .accordion-body h5 {
+    color: #D4AF37;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.about-details .education-year {
+    color: #D4AF37;
+    font-weight: 600;
+}
+
+.about-details .accordion-item hr {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Skills cards */
+.skill-interest-card {
+    height: 100%;
+    background: #17263B;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-left: 4px solid #D4AF37;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-interest-card h4 {
+    color: #ffffff;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
+
+.skill-interest-card ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.skill-interest-card ul li {
+    color: #D5DCE7;
+    margin-bottom: 8px;
+}
+
+/* Certifications */
+.certification-item {
+    padding: 10px 0;
+}
+
+.certification-item h4 {
+    color: #ffffff;
+    font-size: 1.15rem;
+}
+
+/* Gold text */
+.about-details .gold-text {
+    color: #D4AF37;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    .about-details .accordion-button {
+        padding: 18px;
+        font-size: 0.95rem;
+    }
+
+    .about-details .accordion-body {
+        padding: 18px;
+    }
+
+    .skill-interest-card {
+        padding: 18px;
+    }
+}
+
+
+/* ==========================================================
+   8. SKILLS SECTION
+========================================================== */
+
+.skills-section {
+    background: var(--bg-color);
+}
+
+.skill-card {
+    height: 100%;
+
+    background: var(--card-bg);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    padding: 30px 25px;
+    border-radius: 18px;
+
+    text-align: center;
+
+    transition: var(--transition);
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--gold);
+
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.08);
+}
+
+.skill-icon {
+    display: inline-block;
+
+    font-size: 2.6rem;
+    color: var(--gold);
+
+    margin-bottom: 20px;
+
+    transition: var(--transition);
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.12);
+}
+
+.skill-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: var(--text-color);
+
+    font-size: 0.88rem;
+    line-height: 1.8;
+
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   9. PROJECTS SECTION
+========================================================== */
+
+.projects-section {
+    background: var(--bg-secondary);
+}
+
+.project-card {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #131e30;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(212, 175, 55, 0.45);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Project image area */
+
+.project-image-wrapper {
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #0b1120;
+
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+/* Project content */
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+
+    padding: 28px;
+}
+
+.project-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    color: var(--text-color);
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+
+    flex-grow: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: 20px 0;
+}
+
+.project-tags span {
+    background: rgba(212, 175, 55, 0.08);
+
+    border: 1px solid rgba(212, 175, 55, 0.2);
+
+    color: var(--gold-light);
+
+    padding: 6px 12px;
+    border-radius: 50px;
+
+    font-size: 0.75rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--gold);
+    font-weight: 500;
+
+    margin-top: auto;
+
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    color: var(--gold-light);
+    gap: 12px;
+}
+
+
+/* ==========================================================
+   10. CONTACT SECTION
+========================================================== */
+
+.contact-section {
+    background: var(--bg-color);
+}
+
+/* Shared contact cards */
+
+.contact-info-card,
+.contact-form-card {
+    border-radius: 22px;
+    padding: 40px;
+    height: 100%;
+}
+
+/* Get In Touch panel */
+
+.contact-info-card {
+    background: linear-gradient(145deg, #182338, #101827);
+    border: 1px solid var(--border-color);
+}
+
+.contact-info-card h3,
+.contact-form-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact-intro {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.contact-info-card .contact-intro {
+    color: var(--text-color);
+}
+
+
+/* Contact details */
+
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-detail-icon {
+    min-width: 45px;
+    width: 45px;
+    height: 45px;
+
+    border-radius: 12px;
+
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--gold);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2rem;
+}
+
+.contact-detail h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contact-detail p {
+    color: var(--text-color);
+
+    font-size: 0.88rem;
+    line-height: 1.7;
+
+    margin-bottom: 0;
+}
+
+
+/* Contact social heading */
+
+.social-heading {
+    font-weight: 600;
+    margin-top: 35px;
+    margin-bottom: 18px;
+}
+
+/* Social icons */
+
+.contact-socials,
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contact-socials a,
+.footer-socials a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--gold);
+
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 50%;
+
+    font-size: 1.1rem;
+
+    transition: var(--transition);
+}
+
+.contact-socials a:hover,
+.footer-socials a:hover {
+    background: var(--gold);
+    color: var(--bg-color);
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================================
+   11. SEND ME A MESSAGE FORM - LIGHT GOLD
+========================================================== */
+
+.contact-form-card {
+    background: #f3e5b0 !important;
+
+    color: #0b1426;
+
+    border: 1px solid #d4af37;
+    border-radius: 24px;
+
+    padding: 40px;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form-card h3 {
+    color: #0b1426;
+}
+
+.contact-form-card .contact-intro {
+    color: #5b5139;
+}
+
+/* Form labels */
+
+.contact-form-card label {
+    display: block;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    color: #172238;
+}
+
+/* Input fields */
+
+.contact-form-card .form-control {
+    padding: 13px 15px;
+
+    border-radius: 12px;
+    border: 1px solid #d5c38c;
+
+    background: #fffdf7;
+    color: #172238;
+
+    transition: var(--transition);
+}
+
+.contact-form-card .form-control::placeholder {
+    color: #8c8a80;
+}
+
+.contact-form-card .form-control:focus {
+    border-color: #b8941f;
+
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+    outline: none;
+}
+
+.contact-form-card textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+/* Submit button */
+
+.contact-submit-btn {
+    width: 100%;
+
+    background: var(--gold);
+    color: #111827;
+
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+
+    padding: 14px;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.contact-submit-btn:hover {
+    background: #bd9825;
+    border-color: #bd9825;
+    color: #111827;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   12. FOOTER
+========================================================== */
+
+.footer-section {
+    background: #080d17;
+
+    padding: 60px 0 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-section h5 {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.footer-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    color: var(--text-color);
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+    padding-left: 4px;
+}
+
+.footer-socials {
+    margin-top: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+
+    margin-top: 35px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-bottom p {
+    color: #8793a8;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   13. TABLET RESPONSIVE DESIGN
+========================================================== */
+
+@media (max-width: 991px) {
+
+    /* Hero */
+
+    .hero-section {
+        padding-top: 130px;
+        padding-bottom: 80px;
+    }
+
+    .hero-row {
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-bottom: 60px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons,
+    .hero-socials {
+        justify-content: center;
+    }
+
+    .hero-image-wrapper {
+        margin: auto;
+    }
+
+    /* Sections */
+
+    .section-padding {
+        padding: 80px 0;
+    }
+
+    /* Contact */
+
+    .contact-info-card,
+    .contact-form-card {
+        padding: 30px;
+    }
+
+    /* Hero portrait */
+
+    .hero-image-wrapper {
+        width: 400px;
+        height: 400px;
+    }
+
+    .hero-image-inner {
+        width: 320px;
+        height: 320px;
+    }
+
+    /* Projects */
+
+    .project-content {
+        padding: 24px;
+    }
+}
+
+
+/* ==========================================================
+   14. MOBILE RESPONSIVE DESIGN
+========================================================== */
+
+@media (max-width: 576px) {
+
+    /* Navbar */
+
+    .navbar-brand {
+        font-size: 1.25rem;
+        gap: 8px;
+    }
+
+    .navbar-logo {
+        width: 58px;
+        height: 48px;
+        margin-right: 4px;
+    }
+
+    .navbar-brand .logo-text {
+        font-size: 1.5rem;
+    }
+
+    /* Hero */
+
+    .hero-section {
+        padding-top: 110px;
+        padding-bottom: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .hero-buttons .btn {
+        padding: 12px 22px;
+    }
+
+    /* Hero image */
+
+    .hero-image-wrapper {
+        width: 320px;
+        height: 320px;
+    }
+
+    .hero-image-inner {
+        width: 255px;
+        height: 255px;
+    }
+
+    /* Floating cards */
+
+    .floating-card {
+        padding: 10px 12px;
+        font-size: 0.75rem;
+    }
+
+    .developer-card {
+        top: 25px;
+        right: 0;
+    }
+
+    .analytics-card {
+        bottom: 25px;
+        left: 0;
+    }
+
+    /* Sections */
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+
+    /* Cards */
+
+    .about-card,
+    .contact-info-card,
+    .contact-form-card {
+        padding: 25px;
+    }
+
+    .project-content {
+        padding: 22px;
+    }
+
+    .project-image-wrapper {
+        height: 190px;
+    }
+
+    .contact-form-card {
+        border-radius: 20px;
+    }
+}
+
+
+/* ==========================================================
+   15. VERY SMALL MOBILE DEVICES
+========================================================== */
+
+@media (max-width: 380px) {
+
+    .navbar-logo {
+        width: 50px;
+        height: 42px;
+    }
+
+    .navbar-brand .logo-text {
+        font-size: 1.35rem;
+    }
+
+    .hero-image-wrapper {
+        width: 285px;
+        height: 285px;
+    }
+
+    .hero-image-inner {
+        width: 225px;
+        height: 225px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .floating-card {
+        font-size: 0.7rem;
+        padding: 9px 10px;
+    }
+
+    .contact-info-card,
+    .contact-form-card {
+        padding: 20px;
+    }
+}
+
+
+/* ==========================================================
+   16. ACCESSIBILITY - REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==========================================================
+   HERO SECTION - RESPONSIVE SPACING FIX
+   ========================================================== */
+
+/* Tablet and smaller screens */
+@media (max-width: 991px) {
+
+    .hero-section {
+        min-height: auto;
+        padding-top: 110px;
+        padding-bottom: 35px;
+    }
+
+    .hero-row {
+        min-height: auto;
+    }
+
+    .hero-content {
+        margin-bottom: 25px !important;
+    }
+
+    .hero-image-column {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .hero-image-wrapper {
+        margin: 0 auto !important;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+
+    .hero-section {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+
+    .hero-row {
+        min-height: auto;
+    }
+
+    .hero-content {
+        margin-bottom: 15px !important;
+    }
+
+    .hero-description {
+        margin-top: 15px;
+        line-height: 1.75;
+    }
+
+    .hero-buttons {
+        margin-top: 22px;
+    }
+
+    .hero-socials {
+        margin-top: 22px;
+    }
+
+    .hero-image-column {
+        margin-top: 0 !important;
+    }
+
+    .hero-image-wrapper {
+        margin-top: 0 !important;
+    }
+}
+
+/* Very small mobile devices */
+@media (max-width: 380px) {
+
+    .hero-section {
+        padding-top: 90px;
+        padding-bottom: 25px;
+    }
+
+    .hero-content {
+        margin-bottom: 10px !important;
+    }
+
+    .hero-socials {
+        margin-top: 18px;
+    }
+}
+
+/* ==========================================================
+   FINAL HERO RESPONSIVE WIDTH FIX
+   Prevent horizontal overflow on tablet and mobile
+   ========================================================== */
+
+@media (max-width: 991px) {
+
+    .hero-section,
+    .hero-section .container,
+    .hero-row {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .hero-content,
+    .hero-image-column {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .hero-content {
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .hero-content h1 {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .hero-badge {
+        max-width: 100%;
+        white-space: normal;
+        justify-content: center;
+    }
+
+    .hero-description {
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-buttons .btn {
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    .hero-socials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .hero-image-column {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        overflow: visible;
+    }
+
+    .hero-image-wrapper {
+        width: min(380px, 100%);
+        max-width: 100%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* ==========================================================
+   MOBILE WIDTH & TYPOGRAPHY
+   ========================================================== */
+
+@media (max-width: 576px) {
+
+    .hero-section {
+        overflow-x: clip;
+    }
+
+    .hero-section .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hero-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1.85rem, 8vw, 2.3rem);
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1.1rem, 5vw, 1.35rem);
+        line-height: 1.4;
+        overflow-wrap: break-word;
+    }
+
+    .hero-badge {
+        font-size: 0.75rem;
+        padding: 9px 12px;
+    }
+
+    .hero-description {
+        font-size: 0.88rem;
+        line-height: 1.75;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .hero-buttons .btn {
+        padding: 11px 18px;
+        font-size: 0.9rem;
+    }
+
+    .hero-image-wrapper {
+        width: min(320px, 100%);
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .hero-image-inner {
+        width: 79%;
+        height: 79%;
+    }
+
+    .gold-ring.ring-two {
+        width: 92%;
+        height: 92%;
+    }
+
+    .developer-card {
+        right: 0;
+        max-width: 48%;
+    }
+
+    .analytics-card {
+        left: 0;
+        max-width: 48%;
+    }
+
+}
+
+/* ==========================================================
+   EXTRA SMALL PHONES
+   ========================================================== */
+
+@media (max-width: 380px) {
+
+    .hero-content h1 {
+        font-size: 1.85rem;
+    }
+
+    .hero-buttons .btn {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+
+    .hero-image-wrapper {
+        width: min(285px, 100%);
+    }
+
+    .floating-card {
+        padding: 8px 10px;
+        font-size: 0.68rem;
+    }
+}
+
+/* Footer Social Section Fix */
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Keep Follow Me heading on its own line */
+.footer-socials h5 {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+/* Keep all social icons on one row */
+.footer-socials a {
+    flex-shrink: 0;
+}
