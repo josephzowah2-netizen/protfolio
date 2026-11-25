@@ -3,588 +3,876 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Joseph M. Zowah | About Me</title>
+<title>Joseph M. Zowah | About Me</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-          rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+	rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+	rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
-        <div class="container">
+	<!-- ================= NAVBAR ================= -->
+	<nav
+		class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+		<div class="container">
 
-            <a class="navbar-brand fw-bold" href="/">
-                <img src="/images/download.svg" alt="Logo" class="navbar-logo">
-                Joseph<span class="gold-text">.</span>
-            </a>
+			<a class="navbar-brand fw-bold" href="/"> <img
+				src="/images/download.svg" alt="Logo" class="navbar-logo">
+				Joseph<span class="gold-text">.</span>
+			</a>
 
-            <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/about">About</a>
-                    </li>
+					<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#skills">Skills</a>
-                    </li>
+					<li class="nav-item"><a class="nav-link active" href="/about">About</a>
+					</li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#project">Projects</a>
-                    </li>
+					<li class="nav-item"><a class="nav-link" href="/skills">Skills</a>
+					</li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#contact">Contact</a>
-                    </li>
+					<li class="nav-item"><a class="nav-link" href="/project">Projects</a>
+					</li>
 
-                </ul>
-            </div>
-        </div>
-    </nav>
+					<li class="nav-item"><a class="nav-link" href="/contact">Contact</a>
+					</li>
 
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-    <!-- ================= ABOUT SECTION ================= -->
-    <section id="about" class="section-padding about-section">
-        <div class="container">
 
-            <!-- Section Heading -->
-            <div class="section-heading">
-                <span class="section-label">Discover My Journey</span>
+	<!-- ================= ABOUT SECTION ================= -->
+	<section id="about" class="section-padding about-section">
+		<div class="container">
 
-                <h2>
-                    About <span class="gold-text">Me</span>
-                </h2>
+			<!-- Section Heading -->
+			<div class="section-heading">
+				<span class="section-label">Discover My Journey</span>
 
-                <p>My passion, background, education, and journey in technology.</p>
-            </div>
+				<h2>
+					About <span class="gold-text">Me</span>
+				</h2>
 
+				<p>My passion, background, education, and journey in technology.</p>
+			</div>
 
-            <!-- Introduction -->
-            <div class="row align-items-center g-4 mb-5">
 
-                <!-- Profile Card -->
-                <div class="col-lg-5">
-                    <div class="about-card">
+			<!-- Introduction -->
+			<div class="row align-items-center g-4 mb-5">
 
-                        <div class="about-icon">
-                            <i class="bi bi-person-workspace"></i>
-                        </div>
+				<!-- Profile Card -->
+				<div class="col-lg-5">
+					<div class="about-card">
 
-                        <h3>Software Developer</h3>
+						<!-- Profile Photo -->
+						<div class="about-profile-image">
+							<img src="/images/Hero.jpeg"
+								alt="Joseph M. Zowah - Software Developer" class="profile-photo">
+						</div>
 
-                        <p>
-                            I am passionate about technology, programming,
-                            software development, data analytics, and building
-                            digital solutions that can make a meaningful difference.
-                        </p>
+						<h3>Software Developer</h3>
 
-                    </div>
-                </div>
+						<p>I am passionate about technology, programming, software
+							development, data analytics, and building digital solutions that
+							can make a meaningful difference.</p>
 
+						<!-- Technology Tags -->
+						<div class="about-tech-tags">
 
-                <!-- About Introduction -->
-                <div class="col-lg-7">
-                    <div class="about-content">
+							<span class="tech-tag">Java</span> <span class="tech-tag">Spring
+								Boot</span> <span class="tech-tag">Flutter</span> <span
+								class="tech-tag">MySQL</span> <span class="tech-tag">HTML
+								&amp; CSS</span> <span class="tech-tag">JavaScript</span> <span
+								class="tech-tag">Data Analytics</span> <span class="tech-tag">Power
+								BI</span>
 
-                        <h3>Building My Future in Technology</h3>
+						</div>
 
-                        <p>
-                            My name is Joseph M. Zowah. I am an aspiring software
-                            developer and technology enthusiast with a strong interest
-                            in software development, database management,
-                            mobile application development, and data analytics.
-                        </p>
+					</div>
+				</div>
 
-                        <p>
-                            My journey in technology has allowed me to explore
-                            different programming languages, development tools,
-                            databases, and analytical technologies. I enjoy learning
-                            how software works, solving problems, and transforming
-                            ideas into practical digital solutions.
-                        </p>
-
-                        <p>
-                            I am continuously developing my technical knowledge
-                            through academic studies, professional training,
-                            personal projects, and hands-on practice.
-                        </p>
-
-                        <a href="/#contact" class="btn btn-primary-custom mt-3">
-                            Let's Connect
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- ================= ABOUT ACCORDION ================= -->
-            <div class="about-details mt-5">
-
-                <div class="section-heading mb-4">
-                    <span class="section-label">More About Me</span>
-                    <h2>Explore My <span class="gold-text">Background</span></h2>
-                    <p>Click any section below to learn more about my journey.</p>
-                </div>
-
-
-                <div class="accordion" id="aboutMeAccordion">
-
-
-                    <!-- ========== EDUCATION ========== -->
-                    <div class="accordion-item">
-
-                        <h2 class="accordion-header" id="educationHeading">
-                            <button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#educationPanel"
-                                    aria-expanded="false"
-                                    aria-controls="educationPanel">
-
-                                <i class="bi bi-mortarboard-fill me-3"></i>
-                                Education
-
-                            </button>
-                        </h2>
-
-                        <div id="educationPanel"
-                             class="accordion-collapse collapse"
-                             aria-labelledby="educationHeading"
-                             data-bs-parent="#aboutMeAccordion">
-
-                            <div class="accordion-body">
-
-                                <div class="education-item mb-4">
-                                    <h4>High School Diploma</h4>
-                                    <h5>Revival Temple Assembly of God Mission High School</h5>
-                                    <p class="education-year">2012</p>
-
-                                    <p>
-                                        I completed my high school education at
-                                        Revival Temple Assembly of God Mission
-                                        High School, where I developed the
-                                        educational foundation that prepared
-                                        me for my future academic journey.
-                                    </p>
-                                </div>
-
-                                <hr>
-
-                                <div class="education-item mb-4">
-                                    <h4>Bachelor of Information Technology (BIT)</h4>
-                                    <h5>Starz University – College of Science and Technology</h5>
-                                    <p>Monrovia, Liberia</p>
-
-                                    <p>
-                                        I pursued my undergraduate studies in
-                                        Information Technology at Starz University,
-                                        College of Science and Technology.
-                                        This academic experience strengthened
-                                        my interest in computing, information
-                                        systems, and technology.
-                                    </p>
-                                </div>
-
-                                <hr>
-
-                                <div class="education-item">
-                                    <h4>Master of Business Administration (MBA)</h4>
-                                    <h5>Data Analytics &amp; Visualization</h5>
-                                    <p>LNCT University – Bhopal, India</p>
-
-                                    <p>
-                                        I am pursuing my MBA with a specialization
-                                        in Data Analytics and Visualization.
-                                        My postgraduate studies combine business
-                                        knowledge with data-driven decision-making,
-                                        analytics, visualization, and technology
-                                        to understand business challenges
-                                        and support better decisions.
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- ========== CERTIFICATIONS ========== -->
-                    <div class="accordion-item">
-
-                        <h2 class="accordion-header" id="certificationsHeading">
-                            <button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#certificationsPanel"
-                                    aria-expanded="false"
-                                    aria-controls="certificationsPanel">
-
-                                <i class="bi bi-award-fill me-3"></i>
-                                Professional Training &amp; Certifications
-
-                            </button>
-                        </h2>
-
-                        <div id="certificationsPanel"
-                             class="accordion-collapse collapse"
-                             aria-labelledby="certificationsHeading"
-                             data-bs-parent="#aboutMeAccordion">
-
-                            <div class="accordion-body">
-
-                                <p>
-                                    In addition to my academic education,
-                                    I have undertaken professional technical
-                                    training to strengthen my practical skills
-                                    and prepare myself for the technology industry.
-                                </p>
-
-                                <div class="certification-item mb-4">
-                                    <h4>
-                                        <i class="bi bi-code-slash gold-text me-2"></i>
-                                        Java Full Stack Development
-                                    </h4>
-
-                                    <p>
-                                        Training in Java programming and
-                                        full-stack development technologies,
-                                        including web development, backend
-                                        programming, database connectivity,
-                                        and application development.
-                                    </p>
-                                </div>
-
-                                <hr>
-
-                                <div class="certification-item mb-4">
-                                    <h4>
-                                        <i class="bi bi-phone gold-text me-2"></i>
-                                        Mobile Application Development Using Flutter
-                                    </h4>
-
-                                    <p>
-                                        Training in mobile application development
-                                        using Flutter and Dart, with an interest
-                                        in developing modern applications for
-                                        Android and other platforms.
-                                    </p>
-                                </div>
-
-                                <hr>
-
-                                <div class="certification-item">
-                                    <h4>
-                                        <i class="bi bi-database gold-text me-2"></i>
-                                        Oracle Database
-                                    </h4>
-
-                                    <p>
-                                        Training in Oracle Database concepts,
-                                        database structures, data management,
-                                        SQL, and working with relational
-                                        database technologies.
-                                    </p>
-                                </div>
-
-                                <p class="mt-4">
-                                    <strong>Training Institution:</strong>
-                                    Indi Secure, MP Nagar, Bhopal City,
-                                    Madhya Pradesh, India.
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- ========== SKILLS & INTERESTS ========== -->
-                    <div class="accordion-item">
-
-                        <h2 class="accordion-header" id="skillsHeading">
-                            <button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#skillsPanel"
-                                    aria-expanded="false"
-                                    aria-controls="skillsPanel">
-
-                                <i class="bi bi-laptop-fill me-3"></i>
-                                Technical Interests &amp; Skills
-
-                            </button>
-                        </h2>
-
-                        <div id="skillsPanel"
-                             class="accordion-collapse collapse"
-                             aria-labelledby="skillsHeading"
-                             data-bs-parent="#aboutMeAccordion">
-
-                            <div class="accordion-body">
-
-                                <p>
-                                    My technical interests continue to grow as
-                                    I explore different areas of software
-                                    development, database systems, mobile
-                                    technologies, and data analytics.
-                                </p>
-
-                                <div class="row g-3">
-
-                                    <div class="col-md-6">
-                                        <div class="skill-interest-card">
-                                            <h4>
-                                                <i class="bi bi-code-square gold-text me-2"></i>
-                                                Programming &amp; Development
-                                            </h4>
-                                            <ul>
-                                                <li>Java</li>
-                                                <li>Spring Boot</li>
-                                                <li>HTML &amp; CSS</li>
-                                                <li>JavaScript</li>
-                                                <li>Bootstrap</li>
-                                                <li>Python</li>
-                                                <li>C Programming</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="skill-interest-card">
-                                            <h4>
-                                                <i class="bi bi-database-fill gold-text me-2"></i>
-                                                Database Technologies
-                                            </h4>
-                                            <ul>
-                                                <li>MySQL</li>
-                                                <li>Oracle Database</li>
-                                                <li>Database Design</li>
-                                                <li>SQL</li>
-                                                <li>Data Management</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="skill-interest-card">
-                                            <h4>
-                                                <i class="bi bi-phone gold-text me-2"></i>
-                                                Mobile Development
-                                            </h4>
-                                            <ul>
-                                                <li>Flutter</li>
-                                                <li>Dart</li>
-                                                <li>Mobile UI Development</li>
-                                                <li>Cross-Platform Applications</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="skill-interest-card">
-                                            <h4>
-                                                <i class="bi bi-bar-chart-fill gold-text me-2"></i>
-                                                Data Analytics
-                                            </h4>
-                                            <ul>
-                                                <li>Excel</li>
-                                                <li>Power BI</li>
-                                                <li>Data Visualization</li>
-                                                <li>Python for Data Analysis</li>
-                                                <li>Business Analytics</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <p class="mt-4">
-                                    I consider myself a continuous learner.
-                                    Some of these technologies are areas in which
-                                    I have received training, while others are
-                                    skills I continue to develop through practice,
-                                    projects, and self-learning.
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- ========== CAREER GOALS ========== -->
-                    <div class="accordion-item">
-
-                        <h2 class="accordion-header" id="goalsHeading">
-                            <button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#goalsPanel"
-                                    aria-expanded="false"
-                                    aria-controls="goalsPanel">
-
-                                <i class="bi bi-rocket-takeoff-fill me-3"></i>
-                                Career Goals &amp; Vision
-
-                            </button>
-                        </h2>
-
-                        <div id="goalsPanel"
-                             class="accordion-collapse collapse"
-                             aria-labelledby="goalsHeading"
-                             data-bs-parent="#aboutMeAccordion">
-
-                            <div class="accordion-body">
-
-                                <p>
-                                    My goal is to become a skilled and versatile
-                                    technology professional with the ability
-                                    to design, develop, manage, and maintain
-                                    meaningful digital solutions.
-                                </p>
-
-                                <p>
-                                    I am particularly interested in growing
-                                    as a software developer, specializing
-                                    in Java Full Stack Development,
-                                    backend engineering, database management,
-                                    mobile application development,
-                                    and data analytics.
-                                </p>
-
-                                <p>
-                                    I aspire to work on real-world projects
-                                    that challenge me to think creatively,
-                                    improve my technical abilities,
-                                    collaborate with others, and solve
-                                    practical problems.
-                                </p>
-
-                                <p>
-                                    My long-term vision is to use technology
-                                    and innovation to contribute to business
-                                    development, digital transformation,
-                                    education, and the creation of useful
-                                    solutions within my community and beyond.
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- ========== PERSONAL SIDE ========== -->
-                    <div class="accordion-item">
-
-                        <h2 class="accordion-header" id="personalHeading">
-                            <button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#personalPanel"
-                                    aria-expanded="false"
-                                    aria-controls="personalPanel">
-
-                                <i class="bi bi-heart-fill me-3"></i>
-                                Beyond Technology
-
-                            </button>
-                        </h2>
-
-                        <div id="personalPanel"
-                             class="accordion-collapse collapse"
-                             aria-labelledby="personalHeading"
-                             data-bs-parent="#aboutMeAccordion">
-
-                            <div class="accordion-body">
-
-                                <p>
-                                    Beyond technology and academics,
-                                    I value personal growth, creativity,
-                                    relationships, learning, and the
-                                    opportunity to make a positive
-                                    contribution to others.
-                                </p>
-
-                                <p>
-                                    I believe that success is not only about
-                                    acquiring knowledge or technical skills,
-                                    but also about developing discipline,
-                                    humility, perseverance, integrity,
-                                    and a willingness to learn from challenges.
-                                </p>
-
-                                <p>
-                                    I enjoy exploring new ideas, learning
-                                    new technologies, working on personal
-                                    projects, and finding ways to turn
-                                    creativity into something practical.
-                                </p>
-
-                                <p>
-                                    Every experience is an opportunity to
-                                    grow, and I remain committed to
-                                    improving myself both personally
-                                    and professionally.
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-                <!-- End Accordion -->
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="footer-section">
-        <div class="container">
-
-            <div class="row g-4">
-
-                <!-- About Footer -->
-                <div class="col-lg-4">
-                    <h3 class="footer-brand">
-                        Joseph M. Zowah<span class="gold-text">.</span>
-                    </h3>
-
-                    <p>
-                        An aspiring Software Developer who enjoys creating
-                        modern, responsive, and user-friendly digital
-                        solutions while continuously learning and growing
-                        in technology.
-                    </p>
-                </div>
-
-
-                <!-- Quick Links -->
-                <div class="col-lg-2 col-md-4">
+
+				<!-- About Introduction -->
+				<div class="col-lg-7">
+					<div class="about-content">
+
+						<h3>Building My Future in Technology</h3>
+
+						<p>My name is Joseph M. Zowah. I am an aspiring software
+							developer and technology enthusiast with a strong interest in
+							software development, database management, mobile application
+							development, and data analytics.</p>
+
+						<p>My journey in technology has allowed me to explore
+							different programming languages, development tools, databases,
+							and analytical technologies. I enjoy learning how software works,
+							solving problems, and transforming ideas into practical digital
+							solutions.</p>
+
+						<p>I am continuously developing my technical knowledge through
+							academic studies, professional training, personal projects, and
+							hands-on practice.</p>
+
+						<a href="/#contact" class="btn btn-primary-custom mt-3"> Let's
+							Connect </a>
+
+					</div>
+				</div>
+			</div>
+
+
+			<!-- ================= ABOUT ACCORDION ================= -->
+			<div class="about-details mt-5">
+
+				<div class="section-heading mb-4">
+					<span class="section-label">More About Me</span>
+					<h2>
+						Explore My <span class="gold-text">Background</span>
+					</h2>
+					<p>Click any section below to learn more about my journey.</p>
+				</div>
+
+
+				<div class="accordion" id="aboutMeAccordion">
+
+
+
+					<!-- ========== WORK EXPERIENCE ========== -->
+					<div class="accordion-item">
+
+						<h2 class="accordion-header" id="experienceHeading">
+							<button class="accordion-button collapsed" type="button"
+								data-bs-toggle="collapse" data-bs-target="#experiencePanel"
+								aria-expanded="false" aria-controls="experiencePanel">
+
+								<i class="bi bi-briefcase-fill me-3"></i> Work Experience
+
+							</button>
+						</h2>
+
+						<div id="experiencePanel" class="accordion-collapse collapse"
+							aria-labelledby="experienceHeading"
+							data-bs-parent="#aboutMeAccordion">
+
+							<div class="accordion-body">
+
+								<p>My professional journey includes experience in technology
+									training, education, public health campaigns, data management,
+									field supervision, community engagement, and election
+									operations. These roles have helped me develop technical,
+									organizational, communication, leadership, and problem-solving
+									skills.</p>
+
+
+								<!-- Experience 1 -->
+								<div class="experience-item mb-4">
+
+									<h4>Training and Technology Administrator</h4>
+
+									<h5>INTs Registration and Distribution Plan Liberia</h5>
+
+									<p class="experience-date">
+										<i class="bi bi-calendar3 me-2"></i> August 2024 – September
+										2024
+									</p>
+
+									<p>Provided technical training and field technology support
+										to District Health Officers, Community Health Workers, and
+										campaign personnel during registration and distribution
+										activities.</p>
+
+									<h6 class="experience-subtitle">Key Responsibilities</h6>
+
+									<ul>
+										<li>Provided digital technology training to district
+											health officers and community health workers at district and
+											community levels.</li>
+
+										<li>Ensured participants understood and properly
+											assimilated technical concepts during training.</li>
+
+										<li>Configured, deployed, and monitored smartphones,
+											solar chargers, and other technical equipment.</li>
+
+										<li>Troubleshot technical problems related to smartphones
+											and other field equipment.</li>
+
+										<li>Managed the availability, storage, logistics, and
+											distribution of smartphones and equipment.</li>
+
+										<li>Ensured campaign personnel received the equipment
+											required to perform their duties.</li>
+
+										<li>Recorded training attendance and digital presence of
+											campaign personnel.</li>
+
+										<li>Updated campaign staff information and replacement
+											records on the digital platform.</li>
+
+										<li>Provided Level 1 Android device support during
+											training and campaign activities.</li>
+
+										<li>Guided campaign personnel in using Android devices,
+											solar chargers, and the Digit application.</li>
+
+										<li>Reviewed campaign dashboards and identified data gaps
+											requiring resolution.</li>
+
+										<li>Supported data synchronization and generated daily
+											campaign coverage reports.</li>
+
+										<li>Generated, interpreted, and analyzed campaign map and
+											coverage data.</li>
+
+										<li>Assisted with equipment setup, packing, deployment,
+											and distribution.</li>
+
+										<li>Worked under the supervision of the county ICT4D
+											Administrator and in collaboration with District Health
+											Officers.</li>
+									</ul>
+
+								</div>
+
+								<hr>
+
+
+
+								<!-- Experience 2: Teaching Experience -->
+								<div class="experience-item mb-4">
+
+									<h4>Computer Teacher</h4>
+
+									<!-- Feed My Lambs High School -->
+									<h5>Feed My Lambs High School</h5>
+
+									<p class="experience-date">
+										<i class="bi bi-calendar3 me-2"></i> Academic Period: 2019 –
+										2020
+									</p>
+
+									<p>Served as a Computer Teacher, teaching computer-related
+										subjects to students across nine (9) classes, covering Grade 4
+										through Grade 12.</p>
+
+									<ul>
+										<li>Handled nine (9) classes across Grades 4–12.</li>
+										<li>Delivered computer education and foundational IT
+											concepts.</li>
+										<li>Helped students develop computer literacy and
+											practical skills.</li>
+										<li>Guided students in learning and using technology.</li>
+									</ul>
+
+									<hr>
+
+									<!-- F-SHAM of Faith Girls Academy -->
+									<h5>F-SHAM of Faith Girls Academy (Senior High)</h5>
+
+									<p class="experience-date">
+										<i class="bi bi-calendar3 me-2"></i> Academic Period: 2020 –
+										2024
+									</p>
+
+									<p>Taught computer subjects at the senior high school
+										level, with teaching assignments varying across academic
+										years.</p>
+
+									<h6 class="experience-subtitle">Teaching Assignments</h6>
+
+									<ul>
+										<li><strong>2020–2021:</strong> Taught five (5) classes,
+											covering Grade 4 to Grade 9.</li>
+
+										<li><strong>2021–2024:</strong> Taught three (3) classes,
+											covering Grades 10–12.</li>
+									</ul>
+
+									<p>Supported students in developing computer knowledge,
+										digital literacy, and practical technology skills.</p>
+
+									<hr>
+
+									<!-- Messiah Mission Institute -->
+									<h5>Messiah Mission Institute</h5>
+
+									<p class="experience-date">
+										<i class="bi bi-calendar3 me-2"></i> Academic Period: 2022 –
+										One Semester
+									</p>
+
+									<p>Served as a Computer Teacher, teaching nine (9) classes
+										across Grade 4 through Grade 12.</p>
+
+									<ul>
+										<li>Handled nine (9) classes from Grades 4–12.</li>
+										<li>Delivered computer lessons to students across
+											different grade levels.</li>
+										<li>Supported students in developing computer literacy.</li>
+										<li>Provided instruction in computer concepts and
+											practical skills.</li>
+									</ul>
+
+								</div>
+
+
+								<!-- Experience: Voter Identification Officer -->
+								<div class="experience-item mb-4">
+
+									<h4>Voter Identification Officer (VIO)</h4>
+
+									<h5>National Elections Commission (NEC), Liberia</h5>
+
+									<p class="experience-date">
+										<i class="bi bi-calendar3 me-2"></i> 2017 – General
+										Presidential Election
+									</p>
+
+									<p>Served as a Voter Identification Officer during
+										Liberia's General Presidential Election, responsible for
+										identifying and verifying registered voters on the Final
+										Registration Roll (FRR) within an assigned polling room. Also
+										served as the second-in-command to the Presiding Officer (PO),
+										assisting in the management and coordination of polling-room
+										activities.</p>
+
+									<h6 class="experience-subtitle">Key Responsibilities</h6>
+
+									<ul>
+										<li>Identified and verified voters against the Final
+											Registration Roll (FRR) within the assigned polling room.</li>
+										<li>Verified voter registration details to ensure voters
+											were correctly identified during the voting process.</li>
+										<li>Served as the second-in-command to the Presiding
+											Officer (PO), assisting with polling-room operations.</li>
+										<li>Assisted in coordinating polling-room activities and
+											ensuring the orderly flow of voters.</li>
+										<li>Helped maintain order and support the smooth conduct
+											of the voting process.</li>
+										<li>Supported election officials in carrying out their
+											duties in accordance with established electoral procedures.</li>
+										<li>Contributed to an orderly, efficient, and transparent
+											electoral process.</li>
+									</ul>
+
+								</div>
+
+
+								<!-- Experience 4 -->
+								<div class="experience-item mb-4">
+
+									<h4>Supervisor – Polio Vaccination Campaign</h4>
+
+									<h5>Pipeline Health Facility</h5>
+
+									<p class="experience-date">
+										<i class="bi bi-calendar3 me-2"></i> 2015 – 2020
+									</p>
+
+									<p>Supervised vaccination campaign activities within an
+										assigned area, ensuring that vaccination teams were properly
+										equipped and completed their assigned coverage.</p>
+
+									<h6 class="experience-subtitle">Key Responsibilities</h6>
+
+									<ul>
+										<li>Ensured vaccination teams had the necessary supplies
+											and materials.</li>
+
+										<li>Checked the availability of vaccine carriers, ice
+											packs, vaccines, tally sheets, movement maps, and droppers.</li>
+
+										<li>Supervised vaccination teams in their assigned
+											operational areas.</li>
+
+										<li>Monitored team performance and area coverage during
+											campaigns.</li>
+
+										<li>Ensured teams covered their assigned locations within
+											the campaign period.</li>
+
+										<li>Supported vaccination logistics, coordination, and
+											field operations.</li>
+									</ul>
+
+								</div>
+
+								<hr>
+
+
+								<!-- Experience 5 -->
+								<div class="experience-item mb-4">
+
+									<h4>Community Health Volunteer (CHV)</h4>
+
+									<h5>Mental Initiative</h5>
+
+									<p class="experience-date">
+										<i class="bi bi-calendar3 me-2"></i> 2015 – 2016
+									</p>
+
+									<p>Participated in community-based health awareness
+										activities focused on Ebola prevention and community
+										education.</p>
+
+									<h6 class="experience-subtitle">Key Responsibilities</h6>
+
+									<ul>
+										<li>Conducted house-to-house awareness campaigns.</li>
+
+										<li>Educated community members on Ebola prevention
+											measures.</li>
+
+										<li>Promoted preventive health practices and community
+											awareness.</li>
+
+										<li>Engaged community members in health education
+											activities.</li>
+									</ul>
+
+								</div>
+
+								<hr>
+
+
+								<!-- Experience 6 -->
+								<div class="experience-item mb-4">
+
+									<h4>Data Clerk – Measles Vaccination Campaign</h4>
+
+									<p class="experience-date">
+										<i class="bi bi-calendar3 me-2"></i> 2015
+									</p>
+
+									<p>Supported vaccination campaign data recording and
+										management by collecting and entering information related to
+										children vaccinated and vaccine usage.</p>
+
+									<h6 class="experience-subtitle">Key Responsibilities</h6>
+
+									<ul>
+										<li>Entered data on children vaccinated during the
+											campaign.</li>
+
+										<li>Recorded children's age categories and vaccines
+											received.</li>
+
+										<li>Recorded vaccines used and vaccines returned.</li>
+
+										<li>Supported the organization and accuracy of
+											vaccination campaign data.</li>
+									</ul>
+
+								</div>
+
+								<hr>
+
+
+								<!-- Experience 7 -->
+								<div class="experience-item">
+
+									<h4>Health Promoter (ACF)</h4>
+
+									<h5>Action Against Hunger (ACF)</h5>
+
+									<p class="experience-date">
+										<i class="bi bi-calendar3 me-2"></i> 2014 – 2017
+									</p>
+
+									<p>Participated in health promotion and community awareness
+										activities.</p>
+
+									<h6 class="experience-subtitle">Key Responsibilities</h6>
+
+									<ul>
+										<li>Conducted community health awareness activities.</li>
+
+										<li>Promoted health education within communities.</li>
+
+										<li>Supported community outreach and awareness
+											activities.</li>
+									</ul>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+
+					<!-- ========== EDUCATION ========== -->
+					<div class="accordion-item">
+
+						<h2 class="accordion-header" id="educationHeading">
+							<button class="accordion-button collapsed" type="button"
+								data-bs-toggle="collapse" data-bs-target="#educationPanel"
+								aria-expanded="false" aria-controls="educationPanel">
+
+								<i class="bi bi-mortarboard-fill me-3"></i> Education
+
+							</button>
+						</h2>
+
+						<div id="educationPanel" class="accordion-collapse collapse"
+							aria-labelledby="educationHeading"
+							data-bs-parent="#aboutMeAccordion">
+
+							<div class="accordion-body">
+
+								<div class="education-item mb-4">
+									<h4>High School Diploma</h4>
+									<h5>Revival Temple Assembly of God Mission High School</h5>
+									<p class="education-year">2012</p>
+
+									<p>I completed my high school education at Revival Temple
+										Assembly of God Mission High School, where I developed the
+										educational foundation that prepared me for my future academic
+										journey.</p>
+								</div>
+
+								<hr>
+
+								<div class="education-item mb-4">
+									<h4>Bachelor of Information Technology (BIT)</h4>
+									<h5>Starz University – College of Science and Technology</h5>
+									<p>Monrovia, Liberia</p>
+
+									<p>I pursued my undergraduate studies in Information
+										Technology at Starz University, College of Science and
+										Technology. This academic experience strengthened my interest
+										in computing, information systems, and technology.</p>
+								</div>
+
+								<hr>
+
+								<div class="education-item">
+									<h4>Master of Business Administration (MBA)</h4>
+									<h5>Data Analytics &amp; Visualization</h5>
+									<p>LNCT University – Bhopal, India</p>
+
+									<p>I am pursuing my MBA with a specialization in Data
+										Analytics and Visualization. My postgraduate studies combine
+										business knowledge with data-driven decision-making,
+										analytics, visualization, and technology to understand
+										business challenges and support better decisions.</p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+
+					<!-- ========== CERTIFICATIONS ========== -->
+					<div class="accordion-item">
+
+						<h2 class="accordion-header" id="certificationsHeading">
+							<button class="accordion-button collapsed" type="button"
+								data-bs-toggle="collapse" data-bs-target="#certificationsPanel"
+								aria-expanded="false" aria-controls="certificationsPanel">
+
+								<i class="bi bi-award-fill me-3"></i> Professional Training
+								&amp; Certifications
+
+							</button>
+						</h2>
+
+						<div id="certificationsPanel" class="accordion-collapse collapse"
+							aria-labelledby="certificationsHeading"
+							data-bs-parent="#aboutMeAccordion">
+
+							<div class="accordion-body">
+
+								<p>In addition to my academic education, I have undertaken
+									professional technical training to strengthen my practical
+									skills and prepare myself for the technology industry.</p>
+
+								<div class="certification-item mb-4">
+									<h4>
+										<i class="bi bi-code-slash gold-text me-2"></i> Java Full
+										Stack Development
+									</h4>
+
+									<p>Training in Java programming and full-stack development
+										technologies, including web development, backend programming,
+										database connectivity, and application development.</p>
+								</div>
+
+								<hr>
+
+								<div class="certification-item mb-4">
+									<h4>
+										<i class="bi bi-phone gold-text me-2"></i> Mobile Application
+										Development Using Flutter
+									</h4>
+
+									<p>Training in mobile application development using Flutter
+										and Dart, with an interest in developing modern applications
+										for Android and other platforms.</p>
+								</div>
+
+								<hr>
+
+								<div class="certification-item">
+									<h4>
+										<i class="bi bi-database gold-text me-2"></i> Oracle Database
+									</h4>
+
+									<p>Training in Oracle Database concepts, database
+										structures, data management, SQL, and working with relational
+										database technologies.</p>
+								</div>
+
+								<p class="mt-4">
+									<strong>Training Institution:</strong> Indi Secure, MP Nagar,
+									Bhopal City, Madhya Pradesh, India.
+								</p>
+
+							</div>
+						</div>
+					</div>
+
+
+					<!-- ========== SKILLS & INTERESTS ========== -->
+					<div class="accordion-item">
+
+						<h2 class="accordion-header" id="skillsHeading">
+							<button class="accordion-button collapsed" type="button"
+								data-bs-toggle="collapse" data-bs-target="#skillsPanel"
+								aria-expanded="false" aria-controls="skillsPanel">
+
+								<i class="bi bi-laptop-fill me-3"></i> Technical Interests &amp;
+								Skills
+
+							</button>
+						</h2>
+
+						<div id="skillsPanel" class="accordion-collapse collapse"
+							aria-labelledby="skillsHeading"
+							data-bs-parent="#aboutMeAccordion">
+
+							<div class="accordion-body">
+
+								<p>My technical interests continue to grow as I explore
+									different areas of software development, database systems,
+									mobile technologies, and data analytics.</p>
+
+								<div class="row g-3">
+
+									<div class="col-md-6">
+										<div class="skill-interest-card">
+											<h4>
+												<i class="bi bi-code-square gold-text me-2"></i> Programming
+												&amp; Development
+											</h4>
+											<ul>
+												<li>Java</li>
+												<li>Spring Boot</li>
+												<li>HTML &amp; CSS</li>
+												<li>JavaScript</li>
+												<li>Bootstrap</li>
+												<li>Python</li>
+												<li>C Programming</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="skill-interest-card">
+											<h4>
+												<i class="bi bi-database-fill gold-text me-2"></i> Database
+												Technologies
+											</h4>
+											<ul>
+												<li>MySQL</li>
+												<li>Oracle Database</li>
+												<li>Database Design</li>
+												<li>SQL</li>
+												<li>Data Management</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="skill-interest-card">
+											<h4>
+												<i class="bi bi-phone gold-text me-2"></i> Mobile
+												Development
+											</h4>
+											<ul>
+												<li>Flutter</li>
+												<li>Dart</li>
+												<li>Mobile UI Development</li>
+												<li>Cross-Platform Applications</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="skill-interest-card">
+											<h4>
+												<i class="bi bi-bar-chart-fill gold-text me-2"></i> Data
+												Analytics
+											</h4>
+											<ul>
+												<li>Excel</li>
+												<li>Power BI</li>
+												<li>Data Visualization</li>
+												<li>Python for Data Analysis</li>
+												<li>Business Analytics</li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+
+								<p class="mt-4">I consider myself a continuous learner. Some
+									of these technologies are areas in which I have received
+									training, while others are skills I continue to develop through
+									practice, projects, and self-learning.</p>
+
+							</div>
+						</div>
+					</div>
+
+
+					<!-- ========== CAREER GOALS ========== -->
+					<div class="accordion-item">
+
+						<h2 class="accordion-header" id="goalsHeading">
+							<button class="accordion-button collapsed" type="button"
+								data-bs-toggle="collapse" data-bs-target="#goalsPanel"
+								aria-expanded="false" aria-controls="goalsPanel">
+
+								<i class="bi bi-rocket-takeoff-fill me-3"></i> Career Goals
+								&amp; Vision
+
+							</button>
+						</h2>
+
+						<div id="goalsPanel" class="accordion-collapse collapse"
+							aria-labelledby="goalsHeading" data-bs-parent="#aboutMeAccordion">
+
+							<div class="accordion-body">
+
+								<p>My goal is to become a skilled and versatile technology
+									professional with the ability to design, develop, manage, and
+									maintain meaningful digital solutions.</p>
+
+								<p>I am particularly interested in growing as a software
+									developer, specializing in Java Full Stack Development, backend
+									engineering, database management, mobile application
+									development, and data analytics.</p>
+
+								<p>I aspire to work on real-world projects that challenge me
+									to think creatively, improve my technical abilities,
+									collaborate with others, and solve practical problems.</p>
+
+								<p>My long-term vision is to use technology and innovation
+									to contribute to business development, digital transformation,
+									education, and the creation of useful solutions within my
+									community and beyond.</p>
+
+							</div>
+						</div>
+					</div>
+
+
+					<!-- ========== PERSONAL SIDE ========== -->
+					<div class="accordion-item">
+
+						<h2 class="accordion-header" id="personalHeading">
+							<button class="accordion-button collapsed" type="button"
+								data-bs-toggle="collapse" data-bs-target="#personalPanel"
+								aria-expanded="false" aria-controls="personalPanel">
+
+								<i class="bi bi-heart-fill me-3"></i> Beyond Technology
+
+							</button>
+						</h2>
+
+						<div id="personalPanel" class="accordion-collapse collapse"
+							aria-labelledby="personalHeading"
+							data-bs-parent="#aboutMeAccordion">
+
+							<div class="accordion-body">
+
+								<p>Beyond technology and academics, I value personal growth,
+									creativity, relationships, learning, and the opportunity to
+									make a positive contribution to others.</p>
+
+								<p>I believe that success is not only about acquiring
+									knowledge or technical skills, but also about developing
+									discipline, humility, perseverance, integrity, and a
+									willingness to learn from challenges.</p>
+
+								<p>I enjoy exploring new ideas, learning new technologies,
+									working on personal projects, and finding ways to turn
+									creativity into something practical.</p>
+
+								<p>Every experience is an opportunity to grow, and I remain
+									committed to improving myself both personally and
+									professionally.</p>
+
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- End Accordion -->
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ================= FOOTER ================= -->
+	<footer class="footer-section">
+		<div class="container">
+
+			<div class="row g-4">
+
+				<!-- About Footer -->
+				<div class="col-lg-4">
+					<h3 class="footer-brand">
+						Joseph M. Zowah<span class="gold-text">.</span>
+					</h3>
+
+					<p>An aspiring Software Developer who enjoys creating modern,
+						responsive, and user-friendly digital solutions while continuously
+						learning and growing in technology.</p>
+				</div>
+
+
+				<!-- Quick Links -->
+				<div class="col-lg-2 col-md-4">
 
 					<h5>Quick Links</h5>
 
@@ -599,68 +887,59 @@
 				</div>
 
 
-                <!-- Services -->
-                <div class="col-lg-3 col-md-4">
-                    <h5>Services</h5>
+				<!-- Services -->
+				<div class="col-lg-3 col-md-4">
+					<h5>Services</h5>
 
-                    <ul class="footer-links">
-                        <li>Web Development</li>
-                        <li>UI/UX Design</li>
-                        <li>Database Design</li>
-                        <li>Data Analytics</li>
-                    </ul>
-                </div>
-
-
-                <!-- Social Links -->
-                <div class="col-lg-3 col-md-4">
-                    <h5>Follow Me</h5>
-
-                    <div class="footer-socials">
-
-                        <a href="https://www.facebook.com/share/18xVNA3utz/"
-                           target="_blank" rel="noopener noreferrer"
-                           aria-label="Facebook">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-
-                        <a href="https://www.instagram.com/josephmzowah/"
-                           target="_blank" rel="noopener noreferrer"
-                           aria-label="Instagram">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/joseph-m-zowah-473695146/"
-                           target="_blank" rel="noopener noreferrer"
-                           aria-label="LinkedIn">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-
-                        <a href="https://github.com/josephzowah2-netizen"
-                           target="_blank" rel="noopener noreferrer"
-                           aria-label="GitHub">
-                            <i class="bi bi-github"></i>
-                        </a>
-
-                    </div>
-                </div>
+					<ul class="footer-links">
+						<li>Web Development</li>
+						<li>UI/UX Design</li>
+						<li>Database Design</li>
+						<li>Data Analytics</li>
+					</ul>
+				</div>
 
 
-                <!-- Footer Bottom -->
-                <div class="footer-bottom">
-                    <p>&copy; 2026 Joseph M. Zowah. All Rights Reserved.</p>
-                </div>
+				<!-- Social Links -->
+				<div class="col-lg-3 col-md-4">
+					<h5>Follow Me</h5>
 
-            </div>
-        </div>
-    </footer>
+					<div class="footer-socials">
+
+						<a href="https://www.facebook.com/share/18xVNA3utz/"
+							target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+							<i class="bi bi-facebook"></i>
+						</a> <a href="https://www.instagram.com/josephmzowah/" target="_blank"
+							rel="noopener noreferrer" aria-label="Instagram"> <i
+							class="bi bi-instagram"></i>
+						</a> <a href="https://www.linkedin.com/in/joseph-m-zowah-473695146/"
+							target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+							<i class="bi bi-linkedin"></i>
+						</a> <a href="https://github.com/josephzowah2-netizen" target="_blank"
+							rel="noopener noreferrer" aria-label="GitHub"> <i
+							class="bi bi-github"></i>
+						</a>
+
+					</div>
+				</div>
 
 
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+				<!-- Footer Bottom -->
+				<div class="footer-bottom">
+					<p>&copy; 2026 Joseph M. Zowah. All Rights Reserved.</p>
+				</div>
 
-    <!-- Custom JavaScript -->
-    <script th:src="@{/js/script.js}"></script>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Bootstrap JavaScript -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Custom JavaScript -->
+	<script th:src="@{/js/script.js}"></script>
 
 </body>
 </html>
