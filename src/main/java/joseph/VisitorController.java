@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import jakarta.servlet.http.HttpSession;
 
 
 @Controller
@@ -36,15 +39,42 @@ public class VisitorController {
 	public String skills() {
 		return "skills";
 	}
-	@GetMapping("/visitors")
-	public String listStudents(Model model) {
+	
+
+
+	@GetMapping("/login")
+    public String loginPage() {
+        return "login";
+    }
+	
+
+    @PostMapping("/login")
+    public String login(@RequestParam String username,
+                        @RequestParam String password,
+                        HttpSession session,
+                        Model model) {
+        if ("joseph".equals(username) && "1991".equals(password)) {
+            session.setAttribute("user", username);
+            return "redirect:/visitors";
+        }
+        model.addAttribute("error", "Invalid login");
+        return "login";
+    }
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:/";
+    }
+	
+    @GetMapping("/visitors")
+	public String listStudents(HttpSession session,Model model) {
+		if (session.getAttribute("user") == null) {
+            return "redirect:/login";
+        }
 		List<Visitor> visitors = visitorService.findAll();
 		model.addAttribute("data", visitors);
 		return "visitors";
 	}
-
-	
-	
 
 
 	@PostMapping("/save")
